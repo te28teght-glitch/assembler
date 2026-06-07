@@ -1,7 +1,13 @@
+default rel
 global Start
 
 section .text
 Start:
-    mov rax, 20
-    sub rax, 7
+    mov rcx,10
+    mov rax, 0
+loop_start:
+    add rax, 1
+    dec rcx
+    jnz loop_start
+
     ret
